@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charseet="UTF-8">
+        <meta name="viewport" content="widht=device-widht, initial-scaled=1.0">
+        <title>Portofolio Anggun Bastiyar</title> 
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-a"></i>
+                <div class="logo-text">Anggun Bastiyar</div>
+            </div>
+            <nav>
+                <div class="togglebtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portofolio">Portofolio</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#kontak">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="dpkc.jpg" alt="hero-pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hai I'm <span class="input">Student Smk Telkom</span></h5>
+                    <h1>Anggun Bastiyar</h1>
+                    <p>Welcome to my portfolio! I'm a UI/UX Designer passionate about creating intuitive and 
+                        engaging digital experiences.
+                    </p>
+                    <div class="btn-grup">
+                    <a href="#kontak" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.instagram.com/axbastyar_?igsh=MTlzdmIwZmZwMXl6Yg== "><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://pin.it/5q7UZQqUD"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="anggun-bastiyar-3662a2348"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-behance"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="https://github.com/Anggun2106"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js">
+    </script>
+    <script>
+        
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+        var typed=new Typed(".input",{
+            strings:["Student Smk Telkom", "UI/UX Designer"],
+            typedSpeed:70,
+            backSpeed:60,
+            loop:true
+        })
+    </script>
+    
+    <section id="about" class="about">
+        <div class="container-about">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Halo! Saya <b>Anggun Bastiyar</b>, seorang siswa SMK Telkom Purwokerto yang mengambil jurusan Perangkat Lunak dan Pengembangan Gim.
+                    Dengan pengalaman dalam Design UI/UX, Website Interaktif, dan Projek lainnya, 
+                    saya menggabungkan kreativitas dan strategi untuk menciptakan desain inovatif, website interaktif, konten menarik, dll.
+                    Setiap proyek yang saya kerjakan didasarkan pada detail, estetika, dan fungsionalitas yang optimal. 
+                    Mari bekerja sama untuk menciptakan sesuatu yang luar biasa!</p>
+            </div>
+            <div class="about-photo">
+                <img src="ai.jpg" alt="Foto Anggun">
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".about-text").classList.add("show");
+            document.querySelector(".about-photo").classList.add("show");
+        });
+    </script>
+    
+ 
+    <section id="portofolio" class="portofolio">
+    <section class="portfolio-section">
+        <h2>My <span>Portofolio</span></h2>
+        <p>Saya telah mengerjakan berbagai proyek yang mencakup Desain Antarmuka, Database, Pemrograman Website.</p>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <div class="portfolio-item">
+                        <div class="laptop-frame">
+                            <img src="Screenshot 2025-03-09 202706.png" alt="Portfolio 1">
+                        </div>
+                        <p class="portfolio-caption">Medali emas olim sejarah</p>
+                    </div>
+                </div>
+               
+                <div class="slide">
+                    
+                <div class="slide">
+                    <div class="portfolio-item">
+                        <div class="laptop-frame">
+                            <img src="Screenshot 2025-03-09 212843.png" alt="Portfolio 3">
+                        </div>
+                        <p class="portfolio-caption">Website Porto</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="portfolio-item">
+                        <div class="laptop-frame">
+                            <img src="game.jpg" alt="Portfolio 3">
+                        </div>
+                        <p class="portfolio-caption">Tampilan Game</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="portfolio-item">
+                        <div class="laptop-frame">
+                            <img src="Screenshot 2025-03-09 000611.png" alt="Portfolio 4">
+                        </div>
+                        <p class="portfolio-caption">Design Figma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        let slideIndex = 0;
+
+        function moveSlide(step) {
+            const slider = document.querySelector(".slider");
+            const slides = document.querySelectorAll(".slide");
+            const totalSlides = slides.length;
+            const slideWidth = slides[0].offsetWidth + 20; // Tambah margin
+
+            slideIndex += step;
+            
+            if (slideIndex < 0) {
+                slideIndex = totalSlides - 1;
+            } else if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            }
+
+            slider.style.transform = `translateX(${-slideIndex * slideWidth}px)`;
+        }
+    </script>
+    
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            });
+    
+            document.querySelectorAll(".slide-in").forEach((el) => observer.observe(el));
+        });
+    </script>
+    
+    <section id="education" class="education"></section>
+    <section class="education-section">
+        <h2>Education & Skills</h2>
+        <div class="education-container">
+          
+            <div class="edu-item">
+                <img src="tk.jpg" alt="TK Cokroaminoto">
+                <div class="edu-box">
+                    <h3>TK Cokroaminoto Bondolharjo</h3>
+                    <p>Belajar dasar membaca, menulis, dan bermain edukatif.</p>
+                </div>
+            </div>
+    
+            <div class="edu-item">
+                <img src="sd.jpg" alt="SD Negeri 2 Bondolharjo">
+                <div class="edu-box">
+                    <h3>SD Negeri 2 Bondolharjo</h3>
+                    <p>Mengikuti Lomba tentang Kepramukaan, Cerdas Cermat IPA dan IPS, Lomba Pidato</p>
+                </div>
+            </div>
+    
+            <div class="edu-item">
+                <img src="smp.jpg" alt="SMP Negeri 1 Purwanegara">
+                <div class="edu-box">
+                    <h3>SMP Negeri 1 Purwanegara</h3>
+                    <p>Aktif Mengikuti Organisasi Kepramukaan, Mengikuti Lomba Volly, Cerdas Cermat Islam</p>
+                </div>
+            </div>
+    
+            <div class="edu-item">
+                <img src="smk.png" alt="SMK Telkom Purwokerto">
+                <div class="edu-box">
+                    <h3>SMK Telkom Purwokerto</h3>
+                    <p>Mempelajari Ilmu Teknologi dan Membuat Projek Projek, Lomba Pionering, Design Grafis</p>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    
+    
+    <section id="kontak" class="kontak">
+        <div class="kontak-box">
+            <h2>Contact</h2>
+            <form action="porto.php" method="POST">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+    
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" placeholder="Tulis pesan Anda..." required></textarea>
+    
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p id="footer-text">🚀 Anggun Bastiyar | No Copyright © <span id="year"></span></p>
+    </footer>
+    <script>
+        // Auto-update tahun di footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+        </body>
+</html>
